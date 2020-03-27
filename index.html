@@ -2,21 +2,34 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<meta charset="UTF-8">
+	
 <head>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-		<script src="/js/parallax.js"></script>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/main.css">
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="/js/parallax.js"></script> -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+		
+
+
 </head>
 
 <body>
-	<section class="p">
-		<div class="parralax-bg" data-parallax="mouse-move">
-			<div class="parralax-child">
-				<div class="parralax-fg">
-					
-				</div>
-			</div>
+	<div class="scene" id="scene">
+		<div data-depth="0.2" id="bg" >
+			<img src="img/bg.png" alt="">
 		</div>
-	</section>
+		<div  data-depth="0.4" id="centre">
+			<img src="img/child.png" alt="">
+		</div>
+		<div data-depth="0.6" id="fg" >
+			<img src="img/fg.png" alt="">
+		</div>
+	</div>
+	<script>
+			var scene = document.getElementById('scene');
+			var parallaxInstance = new Parallax(scene,{
+ 												relativeInput: true});
+		</script>
 </body>
 </html>
