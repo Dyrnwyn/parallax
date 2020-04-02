@@ -6,6 +6,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script src="../js/parallax.min.js"> </script>
+   <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
  </head>
  <body style="display: flex;
     justify-content: center;
@@ -131,16 +134,23 @@
    <div data-depth="0.007">
     <img src="img/2130_3.png"/>
    </div>
-   <div data-depth="0.8">
+   
+ <!--   <div >
+    <img src="img/2130_1.png"/>
+   </div> -->
+  </div>
+  <div id="draggable" class="ui-widget-content">
     <img src="img/2130_2.png"/>
    </div>
-   <div >
-    <img src="img/2130_1.png"/>
-   </div>
-  </div>
   <script>
    var scene = document.getElementById('scene');
 		var parallaxInstance = new Parallax(scene,{relativeInput: true});
+  </script>
+
+  <script>
+  $( function() {
+    $( "#draggable" ).draggable();
+  } );
   </script>
  </body>
 </html>
