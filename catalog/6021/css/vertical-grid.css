@@ -1,0 +1,44 @@
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+div,img{
+    overflow: hidden;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left:  0px; 
+}
+
+@media all and (max-device-width: 425px){
+img{
+    width: 100vw;
+}
+}
+
+@media all and (max-device-height: 425px) and (orientation: landscape){
+img{
+    height: 100vh;
+}
+}
+
+@media all and (max-device-width: 1024px) and (min-device-width: 426px) and (orientation: portrait){
+img{
+    width: 100vw;
+}
+}
+
+@media all and (max-device-height: 1024px) and (min-device-height: 426px) and (orientation: landscape){
+img{
+    height: 100vh;
+}
+}
+
+
